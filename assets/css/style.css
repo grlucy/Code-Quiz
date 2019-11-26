@@ -1,37 +1,82 @@
+/* GLOBAL */
 body {
   margin: 0;
   padding: 0;
+  background-color: #aaa;
 }
 .row {
   display: flex;
 }
+p {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+/* LOGO DIV */
 .logo {
   height: 38vh;
   width: 38vh;
-  background-color: #eee;
+  background-color: #ccc;
+  box-sizing: border-box;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+#logo {
+  font-family: "Comfortaa", cursive;
+  font-size: 60px;
+  margin: 0;
+}
+
+/* TIMER DIV */
 .timer {
   height: 24vh;
   width: 24vh;
-  background-color: #ccc;
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
+.timeCaption {
+  font-size: 10px;
+  color: #aaa;
+}
+#time {
+  font-family: "Roboto Mono", monospace;
+  font-size: 50px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* DIFFICULTY DIV */
 .difficulty {
   height: 14vh;
   width: 24vh;
-  background-color: #aaa;
+  background-color: #bbb;
+  box-sizing: border-box;
 }
+
+/* INSTRUCTIONS/HIGH SCORES DIV */
 .tabs {
   height: 6vh;
   width: 62vh;
-  background-color: #888;
+  background-color: #ddd;
+  box-sizing: border-box;
 }
 .highScores {
   height: 56vh;
   width: 62vh;
-  background-color: #888;
+  background-color: #ddd;
+  box-sizing: border-box;
 }
+
+/* QUESTIONS DIV */
 .questions {
   height: 100vh;
-  width: 100vh;
-  background-color: #666;
+  width: 75vh;
+  background-color: #aaa;
+  border-right: 1px solid red;
+  box-sizing: border-box;
 }
