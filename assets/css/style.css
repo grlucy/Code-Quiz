@@ -115,7 +115,7 @@ h1 {
   box-sizing: border-box;
   display: flex;
 }
-.instructionsTab {
+#instructionsTab {
   width: 50%;
   height: 100%;
   display: flex;
@@ -127,11 +127,11 @@ h1 {
   /* Styles that will change in javascript */
   border-bottom: none;
 }
-.instructionsTab p,
-.highScoresTab p {
+#instructionsTab p,
+#highScoresTab p {
   font-weight: bolder;
 }
-.highScoresTab {
+#highScoresTab {
   width: 50%;
   height: 100%;
   display: flex;
