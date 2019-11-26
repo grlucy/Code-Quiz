@@ -12,6 +12,10 @@ p {
   margin: 0;
   font-size: 14px;
 }
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}
 
 /* LOGO DIV */
 .logo {
@@ -178,7 +182,39 @@ p {
   height: 100vh;
   width: 75vh;
   background-color: #aaa;
-  border-right: 1px solid red;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 40px 40px 40px 60px;
+}
+#answerWrong,
+#answerRight {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #444;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: left;
+  padding: 6px 12px;
+  margin: 5px 0;
+}
+.answerResult {
+  font-size: 26px;
+  font-weight: bolder;
+}
+#questionOne {
+  display: none;
+}
+#questionTwo {
+  /* display:none; */
+}
+#questionThree {
+  display: none;
+}
+#questionFour {
+  display: none;
+}
+#questionFive {
+  display: none;
 }
