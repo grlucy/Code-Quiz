@@ -199,6 +199,11 @@ h1 {
   padding: 6px 12px;
   margin: 5px 0;
 }
+#answerWrong:hover,
+#answerRight:hover {
+  background-color: #999;
+  cursor: pointer;
+}
 .answerResult {
   font-size: 26px;
   font-weight: bolder;
