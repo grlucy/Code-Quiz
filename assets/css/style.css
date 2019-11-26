@@ -28,6 +28,8 @@ p {
   font-family: "Comfortaa", cursive;
   font-size: 60px;
   margin: 0;
+  font-weight: bolder;
+  color: #444;
 }
 
 /* TIMER DIV */
@@ -36,8 +38,11 @@ p {
   width: 24vh;
   background-color: #ddd;
   text-align: center;
-  padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .timeCaption {
   font-size: 10px;
@@ -49,6 +54,15 @@ p {
   color: #aaa;
   margin: 0;
 }
+#startBtn {
+  background-color: #444;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 
 /* DIFFICULTY DIV */
 .difficulty {
@@ -56,15 +70,67 @@ p {
   width: 24vh;
   background-color: #bbb;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.difficultyCaption {
+  font-size: 10px;
+}
+#easyBtn {
+  background-color: #444;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 5px 0 0 5px;
+  margin: 10px 0 10px;
+  border: none;
+}
+#hardBtn {
+  background-color: #999;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 0 5px 5px 0;
+  margin: 10px 0 10px;
+  border: none;
 }
 
-/* INSTRUCTIONS/HIGH SCORES DIV */
+/* TABS DIV */
 .tabs {
   height: 6vh;
   width: 62vh;
   background-color: #ddd;
   box-sizing: border-box;
+  display: flex;
 }
+.instructionsTab {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  /* Styles that will change in javascript */
+  border-bottom: none;
+}
+.highScoresTab {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #999;
+  border-right: none;
+  /* Styles that will change in javascript */
+  border-bottom: 1px solid #999;
+}
+
+/* INSTRUCTIONS/HIGH SCORES DIV */
 .highScores {
   height: 56vh;
   width: 62vh;
