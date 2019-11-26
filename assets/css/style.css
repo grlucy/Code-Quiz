@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+}
+.logo {
+  height: 38vh;
+  width: 38vh;
+  background-color: #eee;
+}
+.timer {
+  height: 24vh;
+  width: 24vh;
+  background-color: #ccc;
+}
+.difficulty {
+  height: 14vh;
+  width: 24vh;
+  background-color: #aaa;
+}
+.tabs {
+  height: 6vh;
+  width: 62vh;
+  background-color: #888;
+}
+.highScores {
+  height: 56vh;
+  width: 62vh;
+  background-color: #888;
+}
+.questions {
+  height: 100vh;
+  width: 100vh;
+  background-color: #666;
+}
