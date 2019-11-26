@@ -147,6 +147,7 @@ p {
   background-color: #ddd;
   box-sizing: border-box;
   padding: 25px;
+  /* display: none; */
 }
 .instructions p {
   line-height: 1.3;
@@ -158,7 +159,18 @@ p {
   width: 62vh;
   background-color: #ddd;
   box-sizing: border-box;
-  /* display: none; */
+  padding: 25px;
+  display: none;
+}
+#clearHighScoresBtn {
+  background-color: #444;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 /* QUESTIONS DIV */
@@ -168,4 +180,5 @@ p {
   background-color: #aaa;
   border-right: 1px solid red;
   box-sizing: border-box;
+  padding: 40px;
 }
