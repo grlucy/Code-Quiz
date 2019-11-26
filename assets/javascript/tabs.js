@@ -1,4 +1,4 @@
-// When user clicks the "Instructions" or "High Scores" tabs, the corresponding div becomes visible below
+// When user clicks the "Instructions" or "High Scores" tabs, the corresponding div becomes visible below and tab's "border-bottom" changes
 
 let highScoresTab = document.getElementById("highScoresTab");
 let instructionsTab = document.getElementById("instructionsTab");

@@ -164,6 +164,7 @@ h1 {
   background-color: #ddd;
   box-sizing: border-box;
   padding: 25px;
+  overflow: auto;
   display: none;
 }
 #clearHighScoresBtn {
