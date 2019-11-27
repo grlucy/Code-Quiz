@@ -1,13 +1,27 @@
 var questions = [
   {
-    title: "Commonly used data types DO NOT include:",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts"
+    title: "This is question 1?",
+    choices: ["wrong", "wrong", "right", "wrong"],
+    answer: "right"
   },
   {
-    title: "The condition in an if / else statement is enclosed within ____.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses"
+    title: "This is question 2?",
+    choices: ["right", "wrong", "wrong", "wrong"],
+    answer: "right"
+  },
+  {
+    title: "This is question 3?",
+    choices: ["wrong", "wrong", "right", "wrong"],
+    answer: "right"
+  },
+  {
+    title: "This is question 4?",
+    choices: ["wrong", "wrong", "wrong", "right"],
+    answer: "right"
+  },
+  {
+    title: "This is question 5?",
+    choices: ["wrong", "right", "wrong", "wrong"],
+    answer: "right"
   }
-  ///etc.
 ];

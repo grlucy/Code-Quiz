@@ -188,8 +188,7 @@ h1 {
   box-sizing: border-box;
   padding: 40px 40px 40px 60px;
 }
-#answerWrong,
-#answerRight {
+.answerChoice {
   background: none;
   border: 2px solid #fff;
   border-radius: 8px;
@@ -202,27 +201,14 @@ h1 {
   padding: 6px 12px;
   margin: 5px 0;
 }
-#answerWrong:hover,
-#answerRight:hover {
+.answerChoice:hover {
   background-color: #999;
   cursor: pointer;
 }
-.answerResult {
+#answerResult {
   font-size: 26px;
   font-weight: bolder;
+  margin-bottom: 30px;
 }
-#questionOne {
-  display: none;
-}
-#questionTwo {
-  /* display:none; */
-}
-#questionThree {
-  display: none;
-}
-#questionFour {
-  display: none;
-}
-#questionFive {
-  display: none;
+#questionContainer {
 }
