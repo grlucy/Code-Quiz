@@ -200,6 +200,7 @@ h1 {
   text-align: left;
   padding: 6px 12px;
   margin: 5px 0;
+  display: block;
 }
 .answerChoice:hover {
   background-color: #999;
@@ -209,6 +210,4 @@ h1 {
   font-size: 26px;
   font-weight: bolder;
   margin-bottom: 30px;
-}
-#questionContainer {
 }
