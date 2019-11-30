@@ -57,7 +57,8 @@ startBtn.addEventListener("click", function(event) {
         document.getElementById("time").textContent = "0" + easyCountdown;
       }, 1000);
       // TO DO::: Call function that populates question div
-      //TO DO::: If (easyCountdown == 0 || Question #/5 > questions.length){stopEasyTimer();}
+      populateQuestions();
+      //TO DO::: If (easyCountdown >= 0 || Question #/5 > questions.length){stopEasyTimer();}
     } else {
       // Timer is started with 60 seconds
       hardCountdown = 60;
@@ -68,7 +69,8 @@ startBtn.addEventListener("click", function(event) {
         document.getElementById("time").textContent = "0" + hardCountdown;
       }, 1000);
       //TO DO::: call function that populates question div
-      //TO DO::: If (hardCountdown == 0 || Question #/5 > questions.length){stopHardTimer();}
+      populateQuestions();
+      //TO DO::: If (hardCountdown >= 0 || Question #/5 > questions.length){stopHardTimer();}
     }
   } else {
     // Nothing happens on click if start button is currently disabled

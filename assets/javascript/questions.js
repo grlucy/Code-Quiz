@@ -25,3 +25,14 @@ var questions = [
     answer: "right"
   }
 ];
+
+let answerResult = document.getElementById("answerResult");
+let questionNumber = document.getElementById("questionNumber");
+let questionHeader = document.getElementById("questionHeader");
+let questionCount = 0;
+
+function populateQuestions() {
+  answerResult.textContent = "";
+  questionNumber.textContent = `Question ${questionCount + 1}/5`;
+  questionHeader.textContent = questions[questionCount].title;
+}
