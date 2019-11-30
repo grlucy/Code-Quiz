@@ -10,30 +10,24 @@ let dataState = "enabled";
 let easyCountdown;
 let hardCountdown;
 
-function easyTimer() {
-  setInterval(function() {
-    easyCountdown--;
-    document.getElementById("time").textContent = "0" + easyCountdown;
-  }, 1000);
+function stopEasyTimer() {
+  clearInterval(easyTimer);
 }
-function hardTimer() {
-  setInterval(function() {
-    hardCountdown--;
-    document.getElementById("time").textContent = "0" + hardCountdown;
-  }, 1000);
+function stopHardTimer() {
+  clearInterval(hardTimer);
 }
 
 // User clicks start button
 startBtn.addEventListener("click", function(event) {
   if (startBtn.getAttribute("data-state") === "enabled") {
-    // Start button is disabled
+    // Start button is set to disabled
     startBtn.setAttribute("data-state", "disabled");
     startBtn.style.backgroundColor = "#bbb";
     startBtn.style.cursor = "default";
     document.querySelector(".timeCaption").style.color = "#000";
     document.getElementById("time").style.color = "#000";
 
-    // Difficulty buttons are disabled
+    // Difficulty buttons are set to disabled
     dataState = "disabled";
     if (easyMode) {
       hardBtn.style.backgroundColor = "#aaa";
@@ -58,19 +52,31 @@ startBtn.addEventListener("click", function(event) {
       easyCountdown = 75;
       document.getElementById("time").textContent =
         "0" + JSON.stringify(easyCountdown);
-      easyTimer();
+      let easyTimer = setInterval(function() {
+        easyCountdown--;
+        document.getElementById("time").textContent = "0" + easyCountdown;
+      }, 1000);
+      // TO DO::: Call function that populates question div
+      //TO DO::: If (easyCountdown == 0 || Question #/5 > questions.length){stopEasyTimer();}
     } else {
       // Timer is started with 60 seconds
       hardCountdown = 60;
       document.getElementById("time").textContent =
         "0" + JSON.stringify(hardCountdown);
-      hardTimer();
+      let hardTimer = setInterval(function() {
+        hardCountdown--;
+        document.getElementById("time").textContent = "0" + hardCountdown;
+      }, 1000);
+      //TO DO::: call function that populates question div
+      //TO DO::: If (hardCountdown == 0 || Question #/5 > questions.length){stopHardTimer();}
     }
   } else {
+    // Nothing happens on click if start button is currently disabled
     return;
   }
 });
 
+// TO DO::: Reset button styles after quiz ends
 function resetStartBtn() {
   startBtn.setAttribute("data-state", "enabled");
   startBtn.style.backgroundColor = "#444";
@@ -116,5 +122,7 @@ easyBtn.addEventListener("click", function(event) {
     easyBtn.style.backgroundColor = "#444";
     easyMode = true;
     hardMode = false;
+  } else {
+    return;
   }
 });
