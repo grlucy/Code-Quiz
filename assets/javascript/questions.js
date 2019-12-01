@@ -34,10 +34,15 @@ let questionCount = 0;
 
 // Question number and question appear in question div
 function populateQuestions() {
-  answerResult.textContent = "";
-  questionNumber.textContent = `Question ${questionCount + 1}/5`;
-  questionHeader.textContent = questions[questionCount].title;
-  populateButtons();
+  if (questionCount < questions.length) {
+    questionNumber.textContent = `Question ${questionCount + 1}/5`;
+    questionHeader.textContent = questions[questionCount].title;
+    populateButtons();
+  } else {
+    // After the last question is answered, question text and buttons disappear
+    questionNumber.textContent = "";
+    questionHeader.textContent = "";
+  }
 }
 
 // Buttons created for each answer to the current question
@@ -47,8 +52,8 @@ function populateButtons() {
     button.setAttribute("class", "answerChoice");
     button.textContent = questions[questionCount].choices[i];
     document.getElementById("questionContainer").appendChild(button);
-    answerButtonClick();
   }
+  answerButtonClick();
 }
 
 let rightAnswer;
@@ -57,15 +62,17 @@ let rightAnswer;
 function answerButtonClick() {
   let answerButtons = document.querySelectorAll(".answerChoice");
 
-  for (var i = 0; i < answerButtons.length; i++) {
-    let selectedAnswer = answerButtons[i];
+  for (var j = 0; j < answerButtons.length; j++) {
+    let selectedAnswer = answerButtons[j];
     selectedAnswer.addEventListener("click", function(event) {
       if (selectedAnswer.textContent === questions[questionCount].answer) {
         // User's chosen answer was correct
         rightAnswer = true;
+        answerResult.textContent = "Correct!";
       } else {
         // User's chosen answer was incorrect
         rightAnswer = false;
+        answerResult.textContent = "Wrong!";
       }
       // Delete the answer buttons
       while (document.getElementById("questionContainer").hasChildNodes()) {
@@ -74,25 +81,9 @@ function answerButtonClick() {
           .removeChild(document.getElementById("questionContainer").firstChild);
       }
 
-      // Call function to repopulate Questions
-      repopulateQuestions();
+      // Move on to next question
+      questionCount++;
+      populateQuestions();
     });
-  }
-}
-
-function repopulateQuestions() {
-  if (questionCount < questions.length - 1) {
-    // If the current question was not the last question...
-    questionCount = questionCount + 1;
-    if (rightAnswer) {
-      answerResult.textContent = "Correct!";
-    } else {
-      answerResult.textContent = "Wrong!";
-    }
-    questionNumber.textContent = `Question ${questionCount + 1}/5`;
-    questionHeader.textContent = questions[questionCount].title;
-    populateButtons();
-  } else {
-    // If the current question was the last question...
   }
 }
