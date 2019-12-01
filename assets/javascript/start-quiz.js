@@ -10,13 +10,6 @@ let dataState = "enabled";
 let easyCountdown;
 let hardCountdown;
 
-function stopEasyTimer() {
-  clearInterval(easyTimer);
-}
-function stopHardTimer() {
-  clearInterval(hardTimer);
-}
-
 // User clicks start button
 startBtn.addEventListener("click", function(event) {
   if (startBtn.getAttribute("data-state") === "enabled") {
@@ -52,23 +45,31 @@ startBtn.addEventListener("click", function(event) {
       easyCountdown = 75;
       document.getElementById("time").textContent = easyCountdown;
       let easyTimer = setInterval(function() {
-        easyCountdown--;
-        document.getElementById("time").textContent = easyCountdown;
+        // Stop timer when it reaches zero or all questions are answered
+        if (easyCountdown <= 0 || questionCount === questions.length) {
+          clearInterval(easyTimer);
+        } else {
+          easyCountdown--;
+          document.getElementById("time").textContent = easyCountdown;
+        }
       }, 1000);
-      // TO DO::: Call function that populates question div
+      // Populate question div
       populateQuestions();
-      //TO DO::: If (easyCountdown >= 0 || Question #/5 > questions.length){stopEasyTimer();}
     } else {
       // Timer is started with 60 seconds
       hardCountdown = 60;
       document.getElementById("time").textContent = hardCountdown;
       let hardTimer = setInterval(function() {
-        hardCountdown--;
-        document.getElementById("time").textContent = hardCountdown;
+        // Stop timer when it reaches zero or all questions are answered
+        if (hardCountdown <= 0 || questionCount === questions.length) {
+          clearInterval(hardTimer);
+        } else {
+          hardCountdown--;
+          document.getElementById("time").textContent = hardCountdown;
+        }
       }, 1000);
-      //TO DO::: call function that populates question div
+      // Populate question div
       populateQuestions();
-      //TO DO::: If (hardCountdown >= 0 || Question #/5 > questions.length){stopHardTimer();}
     }
   } else {
     // Nothing happens on click if start button is currently disabled

@@ -73,6 +73,7 @@ function answerButtonClick() {
         // User's chosen answer was incorrect
         rightAnswer = false;
         answerResult.textContent = "Wrong!";
+        // Time penalty
         if (easyMode) {
           easyCountdown -= 10;
           document.getElementById("time").textContent = easyCountdown;
