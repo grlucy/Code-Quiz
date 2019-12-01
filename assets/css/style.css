@@ -211,4 +211,26 @@ h1 {
   font-size: 26px;
   font-weight: bolder;
   margin-bottom: 30px;
+  color: #444;
+}
+#initialsInput {
+  width: 100px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  background-color: #ccc;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #444;
+  margin: 15px 5px 0 0;
+}
+#initialsBtn {
+  background-color: #444;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
 }

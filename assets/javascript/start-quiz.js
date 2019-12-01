@@ -48,6 +48,7 @@ startBtn.addEventListener("click", function(event) {
         // Stop timer when it reaches zero or all questions are answered
         if (easyCountdown <= 0 || questionCount === questions.length) {
           clearInterval(easyTimer);
+          quizOver();
         } else {
           easyCountdown--;
           document.getElementById("time").textContent = easyCountdown;
@@ -63,6 +64,7 @@ startBtn.addEventListener("click", function(event) {
         // Stop timer when it reaches zero or all questions are answered
         if (hardCountdown <= 0 || questionCount === questions.length) {
           clearInterval(hardTimer);
+          quizOver();
         } else {
           hardCountdown--;
           document.getElementById("time").textContent = hardCountdown;
