@@ -2,7 +2,7 @@
 var questions = [
   {
     title: "This is question 1?",
-    choices: ["wrong", "wrong", "right", "wrong"],
+    choices: ["0wrong", "1wrong", "right", "3wrong"],
     answer: "right"
   },
   {
@@ -32,6 +32,7 @@ let questionNumber = document.getElementById("questionNumber");
 let questionHeader = document.getElementById("questionHeader");
 let questionCount = 0;
 
+// Question number and question appear in question div
 function populateQuestions() {
   answerResult.textContent = "";
   questionNumber.textContent = `Question ${questionCount + 1}/5`;
@@ -50,18 +51,48 @@ function populateButtons() {
   }
 }
 
+let rightAnswer;
+
+// Click event created for each answer to the current question
 function answerButtonClick() {
   let answerButtons = document.querySelectorAll(".answerChoice");
-  console.log("got here1");
+
   for (var i = 0; i < answerButtons.length; i++) {
-    console.log("got here2");
     let selectedAnswer = answerButtons[i];
     selectedAnswer.addEventListener("click", function(event) {
       if (selectedAnswer.textContent === questions[questionCount].answer) {
-        console.log("correct");
+        // User's chosen answer was correct
+        rightAnswer = true;
       } else {
-        console.log("incorrect");
+        // User's chosen answer was incorrect
+        rightAnswer = false;
       }
+      // Delete the answer buttons
+      while (document.getElementById("questionContainer").hasChildNodes()) {
+        document
+          .getElementById("questionContainer")
+          .removeChild(document.getElementById("questionContainer").firstChild);
+      }
+
+      // Call function to repopulate Questions
+      repopulateQuestions();
     });
+  }
+}
+
+function repopulateQuestions() {
+  if (questionCount < questions.length - 1) {
+    // If the current question was not the last question...
+    questionCount = questionCount + 1;
+    if (rightAnswer) {
+      answerResult.textContent = "Correct!";
+    } else {
+      answerResult.textContent = "Wrong!";
+    }
+    questionNumber.textContent = `Question ${questionCount + 1}/5`;
+    questionHeader.textContent = questions[questionCount].title;
+    populateButtons();
+  } else {
+    // If the current question was the last question...
   }
 }
