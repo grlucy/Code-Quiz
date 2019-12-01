@@ -73,6 +73,13 @@ function answerButtonClick() {
         // User's chosen answer was incorrect
         rightAnswer = false;
         answerResult.textContent = "Wrong!";
+        if (easyMode) {
+          easyCountdown -= 10;
+          document.getElementById("time").textContent = easyCountdown;
+        } else {
+          hardCountdown -= 10;
+          document.getElementById("time").textContent = hardCountdown;
+        }
       }
       // Delete the answer buttons
       while (document.getElementById("questionContainer").hasChildNodes()) {
