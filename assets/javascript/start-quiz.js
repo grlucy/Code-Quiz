@@ -50,11 +50,10 @@ startBtn.addEventListener("click", function(event) {
     if (easyMode) {
       // Timer is started with 75 seconds
       easyCountdown = 75;
-      document.getElementById("time").textContent =
-        "0" + JSON.stringify(easyCountdown);
+      document.getElementById("time").textContent = easyCountdown;
       let easyTimer = setInterval(function() {
         easyCountdown--;
-        document.getElementById("time").textContent = "0" + easyCountdown;
+        document.getElementById("time").textContent = easyCountdown;
       }, 1000);
       // TO DO::: Call function that populates question div
       populateQuestions();
@@ -62,11 +61,10 @@ startBtn.addEventListener("click", function(event) {
     } else {
       // Timer is started with 60 seconds
       hardCountdown = 60;
-      document.getElementById("time").textContent =
-        "0" + JSON.stringify(hardCountdown);
+      document.getElementById("time").textContent = hardCountdown;
       let hardTimer = setInterval(function() {
         hardCountdown--;
-        document.getElementById("time").textContent = "0" + hardCountdown;
+        document.getElementById("time").textContent = hardCountdown;
       }, 1000);
       //TO DO::: call function that populates question div
       populateQuestions();

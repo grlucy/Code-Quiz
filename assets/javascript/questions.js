@@ -1,3 +1,4 @@
+// Array of questions and answers
 var questions = [
   {
     title: "This is question 1?",
@@ -31,19 +32,36 @@ let questionNumber = document.getElementById("questionNumber");
 let questionHeader = document.getElementById("questionHeader");
 let questionCount = 0;
 
-function populateButtons() {
-  // Does this need to be moved to after populateQuestions?
-  for (var i = 0; i < questions[questionCount].choices.length; i++) {
-    let button = document.createElement("button");
-    button.setAttribute("class", "answerChoice");
-    button.textContent = questions[questionCount].choices[i];
-    document.getElementById("questionContainer").appendChild(button);
-  }
-}
-
 function populateQuestions() {
   answerResult.textContent = "";
   questionNumber.textContent = `Question ${questionCount + 1}/5`;
   questionHeader.textContent = questions[questionCount].title;
   populateButtons();
+}
+
+// Buttons created for each answer to the current question
+function populateButtons() {
+  for (var i = 0; i < questions[questionCount].choices.length; i++) {
+    let button = document.createElement("button");
+    button.setAttribute("class", "answerChoice");
+    button.textContent = questions[questionCount].choices[i];
+    document.getElementById("questionContainer").appendChild(button);
+    answerButtonClick();
+  }
+}
+
+function answerButtonClick() {
+  let answerButtons = document.querySelectorAll(".answerChoice");
+  console.log("got here1");
+  for (var i = 0; i < answerButtons.length; i++) {
+    console.log("got here2");
+    let selectedAnswer = answerButtons[i];
+    selectedAnswer.addEventListener("click", function(event) {
+      if (selectedAnswer.textContent === questions[questionCount].answer) {
+        console.log("correct");
+      } else {
+        console.log("incorrect");
+      }
+    });
+  }
 }
