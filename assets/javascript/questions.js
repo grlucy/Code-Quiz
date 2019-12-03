@@ -32,16 +32,33 @@ let questionNumber = document.getElementById("questionNumber");
 let questionHeader = document.getElementById("questionHeader");
 let questionCount = 0;
 
+function clearQuestions() {
+  // After the last question is answered or time runs out, question text and buttons disappear
+  questionNumber.textContent = "";
+  questionHeader.textContent = "";
+  clearButtons();
+}
+function clearButtons() {
+  // Delete the answer buttons
+  while (document.getElementById("questionContainer").hasChildNodes()) {
+    document
+      .getElementById("questionContainer")
+      .removeChild(document.getElementById("questionContainer").firstChild);
+  }
+}
+
 // Question number and question appear in question div
 function populateQuestions() {
-  if (questionCount < questions.length) {
+  if (
+    easyCountdown <= 0 ||
+    hardCountdown <= 0 ||
+    questionCount === questions.length
+  ) {
+    clearQuestions();
+  } else {
     questionNumber.textContent = `Question ${questionCount + 1}/5`;
     questionHeader.textContent = questions[questionCount].title;
     populateButtons();
-  } else {
-    // After the last question is answered, question text and buttons disappear
-    questionNumber.textContent = "";
-    questionHeader.textContent = "";
   }
 }
 
@@ -65,7 +82,15 @@ function answerButtonClick() {
   for (var j = 0; j < answerButtons.length; j++) {
     let selectedAnswer = answerButtons[j];
     selectedAnswer.addEventListener("click", function(event) {
-      if (selectedAnswer.textContent === questions[questionCount].answer) {
+      if (
+        easyCountdown <= 0 ||
+        hardCountdown <= 0 ||
+        questionCount === questions.length
+      ) {
+        clearQuestions();
+      } else if (
+        selectedAnswer.textContent === questions[questionCount].answer
+      ) {
         // User's chosen answer was correct
         rightAnswer = true;
         answerResult.textContent = "Correct!";
@@ -82,12 +107,7 @@ function answerButtonClick() {
           document.getElementById("time").textContent = hardCountdown;
         }
       }
-      // Delete the answer buttons
-      while (document.getElementById("questionContainer").hasChildNodes()) {
-        document
-          .getElementById("questionContainer")
-          .removeChild(document.getElementById("questionContainer").firstChild);
-      }
+      clearButtons();
 
       // Move on to next question
       questionCount++;

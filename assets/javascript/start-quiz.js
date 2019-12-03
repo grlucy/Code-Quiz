@@ -79,34 +79,33 @@ startBtn.addEventListener("click", function(event) {
   }
 });
 
-// TO DO::: Reset button styles after quiz ends
-function resetStartBtn() {
-  startBtn.setAttribute("data-state", "enabled");
-  startBtn.style.backgroundColor = "#444";
-  startBtn.style.cursor = "pointer";
-  document.querySelector(".timeCaption").style.color = "#aaa";
-  document.getElementById("time").style.color = "#aaa";
-}
-function resetDifficultyBtns() {
-  dataState = "enabled";
-  if (easyMode) {
-    hardBtn.style.backgroundColor = "#999";
-    hardBtn.style.color = "#fff";
-    hardBtn.style.cursor = "pointer";
-    easyBtn.style.backgroundColor = "#444";
-    easyBtn.style.color = "#fff";
-    easyBtn.style.cursor = "pointer";
-    document.querySelector(".difficultyCaption").style.color = "#000";
-  } else {
-    hardBtn.style.backgroundColor = "#444";
-    hardBtn.style.color = "#fff";
-    hardBtn.style.cursor = "pointer";
-    easyBtn.style.backgroundColor = "#999";
-    easyBtn.style.color = "#fff";
-    easyBtn.style.cursor = "pointer";
-    document.querySelector(".difficultyCaption").style.color = "#000";
-  }
-}
+// function resetStartBtn() {
+//   startBtn.setAttribute("data-state", "enabled");
+//   startBtn.style.backgroundColor = "#444";
+//   startBtn.style.cursor = "pointer";
+//   document.querySelector(".timeCaption").style.color = "#aaa";
+//   document.getElementById("time").style.color = "#aaa";
+// }
+// function resetDifficultyBtns() {
+//   dataState = "enabled";
+//   if (easyMode) {
+//     hardBtn.style.backgroundColor = "#999";
+//     hardBtn.style.color = "#fff";
+//     hardBtn.style.cursor = "pointer";
+//     easyBtn.style.backgroundColor = "#444";
+//     easyBtn.style.color = "#fff";
+//     easyBtn.style.cursor = "pointer";
+//     document.querySelector(".difficultyCaption").style.color = "#000";
+//   } else {
+//     hardBtn.style.backgroundColor = "#444";
+//     hardBtn.style.color = "#fff";
+//     hardBtn.style.cursor = "pointer";
+//     easyBtn.style.backgroundColor = "#999";
+//     easyBtn.style.color = "#fff";
+//     easyBtn.style.cursor = "pointer";
+//     document.querySelector(".difficultyCaption").style.color = "#000";
+//   }
+// }
 
 // "Easy" and "Hard" buttons are only active when no game is in progress (when dataState is enabled). When user clicks on active "Easy" or "Hard" buttons, the button background-color changes and a boolean variable is assigned to store the active difficulty mode.
 hardBtn.addEventListener("click", function(event) {
