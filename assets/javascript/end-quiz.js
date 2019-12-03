@@ -32,11 +32,11 @@ function submitInitials(event) {
   enterScoreName.removeChild(initialsBtn);
   enterScoreName.removeChild(initialsInput);
   document.getElementById("submitConfirm").textContent =
-    "Your score has been added to the scoreboard.";
+    "Your score has been added.";
   var k = 0;
   let confirmTimer = setInterval(function() {
     k++;
-    if (k == 4) {
+    if (k == 3) {
       document.getElementById("submitConfirm").textContent = "";
       clearInterval(confirmTimer);
       // Page reloads to refresh high score list and reactivate buttons

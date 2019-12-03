@@ -1,29 +1,37 @@
 // Array of questions and answers
 var questions = [
   {
-    title: "This is question 1?",
-    choices: ["0wrong", "1wrong", "right", "3wrong"],
-    answer: "right"
+    title: "What color is rgb(0,0,200)?",
+    choices: ["red", "yellow", "blue", "green"],
+    answer: "blue"
   },
   {
-    title: "This is question 2?",
-    choices: ["right", "wrong", "wrong", "wrong"],
-    answer: "right"
+    title: "Which JavaScript method starts a timer?",
+    choices: [
+      "setInterval()",
+      "createElement()",
+      "getHours()",
+      "clearInterval()"
+    ],
+    answer: "setInterval()"
   },
   {
-    title: "This is question 3?",
-    choices: ["wrong", "wrong", "right", "wrong"],
-    answer: "right"
+    title:
+      "Which Bootstrap class creates a fixed-width content box with width determined by screen size and equal margins on the left and right?",
+    choices: [".divider", ".jumbotron", ".container", ".navbar"],
+    answer: ".container"
   },
   {
-    title: "This is question 4?",
-    choices: ["wrong", "wrong", "wrong", "right"],
-    answer: "right"
+    title:
+      "Which language is primarily used to create the structure of web content?",
+    choices: ["Bootstrap", "JavaScript", "CSS", "HTML"],
+    answer: "HTML"
   },
   {
-    title: "This is question 5?",
-    choices: ["wrong", "right", "wrong", "wrong"],
-    answer: "right"
+    title:
+      "Which command can be used to create a folder on your local machine that accesses an existing Github repository?",
+    choices: ["git pull", "git clone", "git push", "mkdir"],
+    answer: "git clone"
   }
 ];
 
