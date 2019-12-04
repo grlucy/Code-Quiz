@@ -8,7 +8,7 @@ function initScores() {
   }
 }
 function renderScoresDiv() {
-  if (sortedHighScores !== null) {
+  if (sortedHighScores.length > 0) {
     document.getElementById("noScoresStored").style.display = "none";
     // Clear scores div
     while (scoreLine.hasChildNodes()) {
