@@ -176,9 +176,18 @@ h1 {
   padding: 4px 8px;
   border-radius: 5px;
   border: none;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 25px;
   cursor: pointer;
+}
+.newHighScore {
+  background-color: #ccc;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bolder;
+  letter-spacing: 1px;
 }
 
 /* QUESTIONS DIV */

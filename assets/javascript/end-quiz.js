@@ -26,7 +26,7 @@ function submitInitials(event) {
   // Store user's score and initials in an array, then push array to the stored high scores object
   let highScoreInitials = initialsInput.value;
   let timeScore = document.getElementById("time").textContent;
-  sortedHighScores.push(`${timeScore} ${highScoreInitials}`);
+  sortedHighScores.push(`${timeScore} \u00A0 ${highScoreInitials}`);
   // Sort the stored high scores object
   sortedHighScores.sort();
   // Save the sorted high scores object back to local storage

@@ -19,7 +19,7 @@ function renderScoresDiv() {
     for (var i = sortedHighScores.length - 1; i >= 0; i--) {
       let newHighScore = document.createElement("p");
       newHighScore.setAttribute("class", "newHighScore");
-      newHighScore.textContent = `#${scoreRank} - ${sortedHighScores[i]}`;
+      newHighScore.textContent = `#${scoreRank} \u00A0\u00A0 ${sortedHighScores[i]}`;
       scoreLine.appendChild(newHighScore);
       scoreRank++;
     }
