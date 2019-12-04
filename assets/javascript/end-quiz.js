@@ -21,10 +21,21 @@ function quizOver() {
 }
 
 function submitInitials(event) {
-  // Store user's intials in local storage
+  // Get stored high scores from local storage, parsing the JSON string to an object
+  initScores();
+  // Store user's score and initials in an array, then push array to the stored high scores object
   let highScoreInitials = initialsInput.value;
-  localStorage.setItem("Initials", highScoreInitials);
-  // TO DO::::: create array out of local storage (append Initials:value to object), then use array to add score and initials in rank order to high scores screen
+  let timeScore = document.getElementById("time").textContent;
+  sortedHighScores.push(`${timeScore} ${highScoreInitials}`);
+  // Sort the stored high scores object
+  sortedHighScores.sort();
+  // Save the sorted high scores object back to local storage
+  localStorage.setItem(
+    "storedSortedHighScores",
+    JSON.stringify(sortedHighScores)
+  );
+  // update the high scores div
+  renderScoresDiv();
   // Quiz-over screen disappears and confirm submission appears for 3 seconds.
   answerResult.textContent = "";
   finalScore.textContent = "";
