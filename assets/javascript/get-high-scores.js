@@ -25,6 +25,10 @@ function renderScoresDiv() {
     }
   } else {
     document.getElementById("noScoresStored").style.display = "block";
+    // Clear scores div
+    while (scoreLine.hasChildNodes()) {
+      scoreLine.removeChild(scoreLine.firstChild);
+    }
   }
 }
 
