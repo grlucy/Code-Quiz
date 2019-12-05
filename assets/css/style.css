@@ -303,3 +303,38 @@ h2 a {
     padding: 40px 40px 40px 40px;
   }
 }
+
+/* Styles for Instructions and HighScores pages - only accessible in mobile version */
+.responsive-logo {
+  width: 100%;
+  background-color: #ccc;
+  box-sizing: border-box;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #444;
+}
+.responsive-content {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.responsive-button {
+  text-align: center;
+}
+.backBTN {
+  background-color: #444;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

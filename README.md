@@ -13,6 +13,5 @@
 "Coding Sound With JavaScript: Beginner's Guide" tutorial by Mark Lassoff at https://learningsolutionsmag.com/articles/coding-sound-with-javascript-beginner-s-guide
 
 To Do:
-media queries for less than 1024px width & separate high scores page
 good README
 submit github repo and pages links
