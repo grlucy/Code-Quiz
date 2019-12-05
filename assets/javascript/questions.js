@@ -102,10 +102,12 @@ function answerButtonClick() {
         // User's chosen answer was correct
         rightAnswer = true;
         answerResult.textContent = "Correct!";
+        document.getElementById("correctSound").play();
       } else {
         // User's chosen answer was incorrect
         rightAnswer = false;
         answerResult.textContent = "Wrong!";
+        document.getElementById("wrongSound").play();
         // Time penalty
         if (easyMode) {
           easyCountdown -= 10;
