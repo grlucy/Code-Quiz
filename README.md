@@ -2,11 +2,17 @@
 
 ## Description
 
-This is the site I made for the University of Richmond Bootcamp Homework #4: Code Quiz assignment. I used HTML, Git, CSS, and Javascript to develop a timer-based quiz application that stores high scores client-side. I made this site fully responsive through media queries. It is deployed on Github Pages at: https://grlucy.github.io/Code-Quiz/
+A timer-based quiz application that stores high scores client-side. I made this site fully responsive through media queries. It is deployed on Github Pages at: https://grlucy.github.io/Code-Quiz/
 
 This web browser application is intended for use as a coding quiz that enables bootcamp students to gauge their learning progress. Scores are stored in local storage so that users can measure their performance against peers as well as measure how their own performance improves over time.
 
-In building this code quiz, I learned a lot about javascript event listeners and local storage. I also learned how to create an on-click event to play an audio file.
+Technologies used:
+
+> HTML, Git, CSS, and Javascript
+
+## Demo
+
+![Code Quiz demo](/assets/screenshots/Code-Quiz-demo.gif)
 
 ## UI Screenshots
 
@@ -21,11 +27,9 @@ Score is calculated by the seconds remaining on the timer upon quiz completion. 
 
 ## Credits
 
-"164090_hypocore_buzzer.wav" sound file by hypocore on freesounds.org: https://freesound.org/people/hypocore/sounds/164090/ (Creative Commons license CC0 1.0)
-
-"265012_sethlind_toaster-oven-ding.wav" sound file by sethlind on freesounds.org: https://freesound.org/people/sethlind/sounds/265012/ (Creative Commons license CC0 1.0)
-
-"Coding Sound With JavaScript: Beginner's Guide" tutorial by Mark Lassoff at https://learningsolutionsmag.com/articles/coding-sound-with-javascript-beginner-s-guide
+- "164090_hypocore_buzzer.wav" sound file by hypocore on freesounds.org: https://freesound.org/people/hypocore/sounds/164090/ (Creative Commons license CC0 1.0)
+- "265012_sethlind_toaster-oven-ding.wav" sound file by sethlind on freesounds.org: https://freesound.org/people/sethlind/sounds/265012/ (Creative Commons license CC0 1.0)
+- "Coding Sound With JavaScript: Beginner's Guide" tutorial by Mark Lassoff at https://learningsolutionsmag.com/articles/coding-sound-with-javascript-beginner-s-guide
 
 ## License
 
